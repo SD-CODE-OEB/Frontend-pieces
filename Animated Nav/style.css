@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: azure;
+    background: linear-gradient(to bottom, lightblue 50%, lightblue 50%,lightpink 50%, lightpink 50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border: none;
+    transition: width .5s linear;
+    position: relative;
+}
+
+.nav.active{
+    width: 25%;
+    min-width: 310px;
+}
+
+.nav ul{
+    display: inline-flex;
+    list-style: none;
+    width: 0;
+    opacity: 0;
+    transition: width .6s linear, opacity .8s ease;
+}
+
+.nav.active ul{
+    width: 85%;
+    opacity: 1;
+}
+.nav ul li{
+    transition: all .8s ease-out;
+}
+
+.nav.active ul li{
+    transform: rotateY(360deg);
+}
+.nav ul li a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    transform: rotate(360deg);
+}
+
+.btn{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    background: none;
+    border: none;
+}
+
+.btn.active{
+    position: absolute;
+    top: 16px;
+    right: 14px;
+}
+.btn .line{
+    height: 1px;
+    width: 75%;
+    background-color: royalblue;
+    transition: all .8s linear;
+}
+
+
+.btn .line1{
+    position: absolute;
+    top: 18px;
+    left: 25%;
+    transform: rotate(45deg);
+}
+
+.btn .line2{
+    position: absolute;
+    top: 18px;
+    left: 25%;
+    transform: rotate(-45deg);
+}
+
+.btn.active .line1{
+    transform: rotate(540deg) translateY(5.5px);
+    height: 3px;
+    top: 14px;
+}
+
+.btn.active .line2{
+    transform: rotate(-540deg) translateY(5.5px);
+    top: 20px;
+    height: 3px;
+}

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background-color: teal;
+}
+
+.tri{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 10px 0;
+}
+
+.tri::after,.tri::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 50px solid transparent;
+    height: 0;
+    width: 0;
+    border-bottom-color:white ;
+    animation: loadA 2s linear  infinite .5s forwards;
+}
+
+.tri::before{
+    transform: rotate(90deg);
+    animation: loadB 2s linear  infinite backwards;
+}
+
+@keyframes loadA {
+    0%, 25%{
+        transform: rotate(0deg);
+    }
+
+    50%,75%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadB {
+    0%, 25%{
+        transform: rotate(90deg);
+    }
+
+    50%, 75% {
+        transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(450deg);
+    }
+}

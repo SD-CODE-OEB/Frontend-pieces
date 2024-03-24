@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.content-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.btns button{
+    position: absolute;
+    top:50%;
+    left: 26.5%;
+    color: gainsboro;
+    background: white;
+    border: 1px solid black;
+    border: none;
+    padding: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.btns .down-btn{
+    transform: translateX(100%);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.btns .up-btn{
+    transform: translateY(100%);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+button:hover{
+    color: black;
+}
+
+button :focus{
+    outline: none;
+}
+
+.left-slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 30vw;
+}
+
+.left-slider > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s ease;
+}
+
+h1{
+    font-size: 48px;
+}
+
+.right-slider{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100%;
+    width: 70vw;
+    display: inline-block;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.img.active{
+    opacity: 1;
+}

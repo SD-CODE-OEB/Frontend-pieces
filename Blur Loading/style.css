@@ -1,0 +1,111 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-img{
+    background-image: url('pexels-francesco-ungaro-3157890.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(30px);
+    /* transition: filter .5s ease; */
+    animation: blurr 4s ease 1;
+}
+
+.loader{
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    color: white;
+    font-size: 52px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    animation: vanish 4s ease 1;
+}
+
+/* .bg-img.active{
+    filter: blur(0px);
+} */
+
+@keyframes blurr{
+    0%{
+        filter: blur(30px);
+    }
+    10%{
+        filter: blur(26px);
+    }
+    20%{
+        filter: blur(24px);        
+    }
+    30%{
+        filter: blur(20px);        
+    }
+    40%{
+        filter: blur(16px);        
+    }
+    50%{
+        filter: blur(14px);        
+    }
+    60%{
+        filter: blur(10px);        
+    }
+    70%{
+        filter: blur(8px);        
+    }
+    80%{
+        filter: blur(6px);        
+    }
+    90%{
+        filter: blur(2px);
+    }
+    100%{
+        filter: blur(0px);        
+    }
+    
+}
+
+@keyframes vanish {
+    0%{
+        opacity: 1;
+    }
+
+    20%{
+        opacity: .8;
+    }
+
+    40%{
+        opacity: .6;
+    }
+
+    60%{
+        opacity: .4;
+    }
+
+    80%{
+        opacity: .2;
+    }
+
+    90%{
+        opacity: .1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

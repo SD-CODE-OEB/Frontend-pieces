@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:linear-gradient(to right, violet ,indigo, blue , green, yellow, orange, red);
+}
+
+h1{
+    font-size: 42px;
+    color: white;
+    font-style: italic;
+    letter-spacing: 15px;
+    margin-bottom: 15px;
+}
+
+canvas{
+    height: 400px;
+    width: 600px;
+    background-color: white;
+    border: 2px solid royalblue;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.301);
+}
+
+#tools{
+    display: inline-flex;
+    background-color: royalblue;
+    width: 600px;
+    height: 35px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.315);
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+button, #number{
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    background-color:lightblue;
+    font-size: 18px;
+    border-radius: .4rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform .8s ease ;
+}
+
+button:active,#colors:active {
+    transform: scale(.55);
+}
+#number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#minus{
+    margin-left: 10px;
+}
+
+#plus{
+    margin-right: 10px;
+}
+#colors{
+    height: 30px;
+    width: 60px;
+    border: 5px solid white;
+    border-radius: .4rem;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform  .8s ease-out;
+}
+
+#restart{
+    justify-self: flex-end;
+    position: absolute;
+    right: 10px;
+}

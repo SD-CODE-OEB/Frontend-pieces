@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    height: 100dvh;
+    width: 100dvw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.prog-box{
+    display: flex;
+    width: 65vw;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.prog-box::before{
+    content: '';
+    background-color: slategrey;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top:40%;
+    left: 0;
+    z-index: -1;
+}
+.prog-line{
+    background-color: royalblue;
+    height: 4px;
+    width: 0%;
+    position: absolute;
+    top:40%;
+    left: 0;
+    transition: width .5s ease-out;
+    z-index: -1;
+}
+.prog-line.active{
+    width:33%
+}
+
+.circle{
+    border: 3px solid slategrey;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition:.5s ease .3s;
+}
+
+.circle.active{
+    border-color: royalblue;
+}
+
+.btn-box{
+    margin-top: 55px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.btn{
+    background-color: royalblue;
+    border:none;
+    padding: 5px;
+    width: 75px;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+.btn:active{
+    color: blue;
+    background-color: whitesmoke;
+}
+.btn:disabled{
+    background-color: gainsboro;
+    color: slategray;
+    cursor: no-drop;
+}
+
+@media (max-width:400px) {
+    .btn{
+        width: 45px;
+    }
+}

@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #0099ff ;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+h5{
+    color: white;
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    width: 25vw;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    row-gap: 25px;
+    margin-bottom: 25px;
+}
+
+.bottle{
+    border: 5px solid  #393dec;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    background-color: white;
+    color: rgba(42, 42, 168, 0.822);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: background-color .3s cubic-bezier(0.6, -0.78, 0.735, 0.045);
+    position: relative;
+    overflow: hidden;
+}
+
+.bottle-large{
+    height: 360px;
+    width: 155px;
+}
+
+.constant{
+    overflow: hidden;
+    justify-self: center;
+}
+.filled{
+    height: 0;
+    width: 100%;
+    background-color: skyblue;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: white;
+    font-weight: bolder;
+    transition: all .8s ease;
+}
+.bottle-small{
+    height: 85px;
+    width: 55px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bottle.fill{
+    background-color: skyblue;
+    color: white;
+    font-weight: 900;
+}
+
+.bottle-large.fill{
+    background-color: skyblue;
+}
