@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Projects</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: snow;
+      }
+      h1 {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-style: italic;
+        font-size: 2rem;
+        margin: 0 auto 20px auto;
+      }
+      fieldset {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+      a {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        background-color: #f1f1f1;
+        transition: all 0.3s;
+      }
+      a:hover {
+        background-color: #333;
+        color: #fff;
+      }
+      .frame {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome To My Project Feild</h1>
+    <iframe name="frame" class="frame" title="box"></iframe>
+    <fieldset>
+      <a href="./Animated Nav/index.html" target="frame">Animated Nav</a>
+      <a href="./Audio Btns/index.html" target="frame">Buttons with Audio</a>
+      <a href="./Bg-Image Changer/index.html" target="frame"
+        >Screen With Changable Background Images</a
+      >
+      <a href="./Blur Loading/index.html" target="frame">Blurry Loading page</a>
+      <a href="./Btn-Ripples/index.html" target="frame"
+        >Ripple Effect On a Button</a
+      >
+      <a href="./Canvas Painter/index.html" target="frame"
+        >Draw in a web Canvas</a
+      >
+      <a href="./Card Animation/index.html" target="frame"
+        >Card with Loading Animation</a
+      >
+      <a href="./Clickable Slides/index.html" target="frame"
+        >Clickable Sliding Images</a
+      >
+      <a href="./Clock/index.html" target="frame">Clock with Dark mode</a>
+      <a href="./Content Slider/index.html" target="frame"
+        >Animated Content Slider</a
+      >
+      <a href="./Drag-n-Drop/index.html" target="frame"
+        >Drag-n-Drop Mechanism</a
+      >
+      <a href="./Fast Counter/index.html" target="frame"
+        >Animated Counting Display</a
+      >
+      <a href="./Info Snippets/index.html" target="frame">FAQ Dropdown</a>
+      <a href="./Joke Api/index.html" target="frame">Random Joke Page</a>
+      <a href="./KeyBoard Events/index.html" target="frame"
+        >Various Keyboard Event Attributes</a
+      >
+      <a href="./Page Changer/index.html" target="frame">Go-to slider</a>
+      <a href="./Random Picker/index.html" target="frame"
+        >Random Choice From Given Inputs</a
+      >
+      <a href="./Rectangle-Colors/index.html" target="frame"
+        >Colors in Rectangle</a
+      >
+      <a href="./Rotating Nav/index.html" target="frame">Nav Bar Rotation</a>
+      <a href="./Search Toggle/index.html" target="frame">Toggle Effect</a>
+      <a href="./Sharp Loader/index.html" target="frame">Loader for any Page</a>
+      <a href="./Split Page Design/index.html" target="frame"
+        >Split Page Design</a
+      >
+      <a href="./Sticky Nav/index.html" target="frame">Sticky nav bar</a>
+      <a href="./Water Filler/index.html" target="frame"
+        >Smooth Water Filler with JS</a
+      >
+      <a href="./Wave Effect Login/index.html" target="frame"
+        >Form with Wave Effect</a
+      >
+    </fieldset>
+    <script>
+      const frame = document.querySelector(".frame");
+      const heading = document.querySelector("h1");
+      const links = document.querySelectorAll("a");
+      const body = document.querySelector("body");
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          // body.style.display = "grid";
+          // body.style.gridTemplateColumns = "40% 60%";
+          frame.style.display = "inline-block";
+          frame.style.float = "right";
+          frame.style.width = "60%";
+          frame.style.height = "100%";
+          frame.src = link.href;
+          heading.textContent = link.textContent;
+        });
+      });
+    </script>
+  </body>
+</html>
