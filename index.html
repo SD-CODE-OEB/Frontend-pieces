@@ -14,12 +14,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: snow;
+        min-height: 100vh;
+        background-color: rgb(243, 211, 153);
       }
       h1 {
         background-color: #333;
-        color: #fff;
+        color: wheat;
         padding: 10px;
         border-radius: 10px;
         text-align: center;
@@ -36,7 +36,13 @@
         padding: 20px;
         border: 1px solid #333;
         border-radius: 10px;
-        background-color: #fff;
+        background-color: wheat;
+      }
+      a:nth-child(even) {
+        background-color: #2d2926ff;
+      }
+      a:nth-child(odd) {
+        background-color: #e94b3cff;
       }
       a {
         display: block;
@@ -46,13 +52,13 @@
         border-radius: 5px;
         text-align: center;
         text-decoration: none;
-        color: #333;
+        color: #fff;
         background-color: #f1f1f1;
         transition: all 0.3s;
       }
       a:hover {
-        background-color: #333;
-        color: #fff;
+        background-color: #fff;
+        color: #000;
       }
       .frame {
         display: none;
@@ -129,7 +135,7 @@
           frame.style.display = "inline-block";
           frame.style.float = "right";
           frame.style.width = "60%";
-          frame.style.height = "100%";
+          frame.style.height = "555px";
           frame.src = link.href;
           heading.textContent = link.textContent;
         });
