@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100dvh;
     width: 100dvw;
     display: flex;
@@ -14,20 +14,20 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.form-container{
-    height: 75dvh;
-    width: 55dvh;
+.form-container {
+    height: 425px;
+    width: 375px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: rgb(255, 199, 255);
     padding: 1.8rem;
     border-radius: .6rem;
-    box-shadow:  -15px -4px 26px floralwhite,  15px 4px 26px floralwhite;
+    box-shadow: 1px 0px 10px rgba(15, 14, 14, 0.28), inset 1px 0px 10px rgba(0, 0, 0, 0.388);
 }
 
-.form-container h1{
+.form-container h1 {
     font-size: 42px;
     text-align: center;
     color: darkviolet;
@@ -35,36 +35,37 @@ body{
     border-radius: .2rem;
 }
 
-.form-element{
+.form-element {
     position: relative;
     border: 1px solid darkorchid;
 }
 
-.form-element input{
-    display:block;
+.form-element input {
+    display: block;
     width: 100%;
     border: 0;
     border-bottom: 1px solid black;
-    background-color:rgb(255, 199, 255) ;
+    background-color: rgb(255, 199, 255);
     padding: .6rem;
     font-size: 18px;
 }
 
-.form-element input:focus, .form-element input:valid{
+.form-element input:focus,
+.form-element input:valid {
     outline: none;
     border-bottom-color: rebeccapurple;
 }
 
-.form-element label{
+.form-element label {
     position: absolute;
     top: 8px;
     left: 10px;
 }
 
-.btn{
+.btn {
     border: 0;
     padding: .6rem;
-    background-color:darkviolet ;
+    background-color: darkviolet;
     font-size: 18px;
     width: 100%;
     border-radius: .2rem;
@@ -73,37 +74,36 @@ body{
     cursor: pointer;
 }
 
-.btn:active{
+.btn:active {
     transform: scale(.95);
 }
 
-.text{
+.text {
     font-size: 16px;
 }
 
-.text a{
+.text a {
     text-decoration: none;
     color: red;
 }
 
-.form-element label span{
+.form-element label span {
     display: inline-block;
     min-width: 5px;
-    transition:.33s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background-color:  rgb(255, 199, 255);
+    transition: .33s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: rgb(255, 199, 255);
 }
 
-.form-element input:valid + label span
-,.form-element input:focus + label span
- {
+.form-element input:valid+label span,
+.form-element input:focus+label span {
     color: rebeccapurple;
     transform: translateY(-20px);
 }
 
-@media (max-width:900px) {
-    .form-container{
-        width: 50%;
-        height: 30%;
+@media (max-width:400px) {
+    .form-container {
+        width: 225px;
+        height: 375px;
     }
-    
+
 }
