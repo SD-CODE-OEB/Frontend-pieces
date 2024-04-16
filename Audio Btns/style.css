@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100dvh;
     width: 100dvw;
     display: flex;
@@ -14,34 +14,37 @@ body{
     overflow: hidden;
 }
 
-.container{
+.container {
     background-color: rebeccapurple;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.btns{
+.btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 10px;
-    flex:0.5 ;
+    flex-wrap: wrap;
+    flex: .8;
 }
-.i-btn{
+
+.i-btn {
     padding: 1rem 2rem;
     color: rebeccapurple;
     font-size: 24px;
     margin: 0px 5px;
-    background-color: mediumpurple; 
+    background-color: mediumpurple;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: none;
     border-radius: .6rem;
     cursor: pointer;
 }
 
-.nature{
+.nature {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
