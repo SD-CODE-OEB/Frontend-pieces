@@ -14,12 +14,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: snow;
+        min-height: 100vh;
+        background-color: rgb(243, 211, 153);
       }
       h1 {
         background-color: #333;
-        color: #fff;
+        color: wheat;
         padding: 10px;
         border-radius: 10px;
         text-align: center;
@@ -36,7 +36,13 @@
         padding: 20px;
         border: 1px solid #333;
         border-radius: 10px;
-        background-color: #fff;
+        background-color: wheat;
+      }
+      a:nth-child(even) {
+        background-color: #2d2926ff;
+      }
+      a:nth-child(odd) {
+        background-color: #e94b3cff;
       }
       a {
         display: block;
@@ -46,16 +52,39 @@
         border-radius: 5px;
         text-align: center;
         text-decoration: none;
-        color: #333;
+        color: #fff;
         background-color: #f1f1f1;
         transition: all 0.3s;
       }
       a:hover {
-        background-color: #333;
-        color: #fff;
+        background-color: #fff;
+        color: #000;
       }
       .frame {
         display: none;
+      }
+      @media (max-width: 1100px) {
+        body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+        fieldset {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        .frame {
+          height: 555px;
+          width: 80%;
+          display: block;
+        }
+      }
+      @media (max-width: 450px) {
+        fieldset {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .frame {
+          width: 100%;
+        }
       }
     </style>
   </head>
