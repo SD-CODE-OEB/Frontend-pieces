@@ -63,6 +63,29 @@
       .frame {
         display: none;
       }
+      @media (max-width: 1100px) {
+        body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+        fieldset {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        .frame {
+          height: 555px;
+          width: 80%;
+          display: block;
+        }
+      }
+      @media (max-width: 450px) {
+        fieldset {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .frame {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
